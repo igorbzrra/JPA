@@ -1,0 +1,23 @@
+package com.example.model;
+
+import jakarta.persistence.*;
+
+@Entity
+public class HistoricoServico {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @ManyToOne
+    @JoinColumn(name = "veiculo_id")
+    private Veiculo veiculo;
+
+    @ManyToOne
+    @JoinColumn(name = "funcionario_id")
+    private Funcionario funcionario;
+
+    @ManyToOne
+    @JoinColumn(name = "servico_id")
+    private Servico servico;
+
+}

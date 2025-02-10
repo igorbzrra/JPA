@@ -1,0 +1,17 @@
+package com.example.model;
+
+import jakarta.persistence.*;
+
+@Entity
+public class Endereco {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String cidade;
+    private String bairro;
+    private String rua;
+    private String numero;
+    private String cep;
+
+
+}
